@@ -40,6 +40,10 @@
     <Compile Include="MissingInteger.cs" />
     <Compile Include="MaxCounters.cs" />
     <Compile Include="CountDiv.cs" />
+    <Compile Include="BinaryGap.cs" />
+    <Compile Include="PassingCars.cs" />
+    <Compile Include="MinAvgTwoSlice.cs" />
+    <Compile Include="GenomicRangeQuery.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

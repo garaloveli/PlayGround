@@ -65,10 +65,11 @@ Elements of input arrays can be modified.
      */
     public class MaxCounters
     {
-        public int[] solution(int N, int[] A)
+
+
+        public int[] solution_one(int N, int[] A)
         {
             // write your code in C# 6.0 with .NET 4.5 (Mono)
-
             int[] res = new int[N];
             int maxCounter = 0;
             for (int k = 0; k < A.Length; k++)

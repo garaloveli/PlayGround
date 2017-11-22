@@ -1,14 +1,18 @@
 ﻿using System;
 
+
 namespace PlayGround
 {
     class MainClass
     {
         public static void Main(string[] args)
         {
-            int[] a = new int[] {8, 4, 6, 2, 6, 4, 7, 9, 5, 8};
-            Console.WriteLine(FirstDuplicate(a));
-            Console.WriteLine("Hello World!");
+            //int[] a = new int[] {8, 4, 6, 2, 6, 4, 7, 9, 5, 8};
+            //Console.WriteLine(FirstDuplicate(a));
+            //Console.WriteLine("Hello World!");
+            var gap = new BinaryGap();
+            gap.solution(2);
+            Console.ReadLine();
         }
 
         public static int FirstDuplicate(int[] a)
