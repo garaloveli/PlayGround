@@ -34,6 +34,12 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TapeEquilibrium.cs" />
+    <Compile Include="PermCheck.cs" />
+    <Compile Include="FrogRiverOne.cs" />
+    <Compile Include="MissingInteger.cs" />
+    <Compile Include="MaxCounters.cs" />
+    <Compile Include="CountDiv.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
