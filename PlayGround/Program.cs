@@ -1,5 +1,5 @@
 ﻿using System;
-
+using PlayGround.bs;
 
 namespace PlayGround
 {
@@ -7,11 +7,21 @@ namespace PlayGround
     {
         public static void Main(string[] args)
         {
-            //int[] a = new int[] {8, 4, 6, 2, 6, 4, 7, 9, 5, 8};
             //Console.WriteLine(FirstDuplicate(a));
             //Console.WriteLine("Hello World!");
-            var gap = new BinaryGap();
-            gap.solution(2);
+
+            //int[] a = new int[] { 1, 4, -1, 3, 2 };
+            //var gap = new ArrayLength();
+            //var res = gap.solution(a);
+            //Console.WriteLine(res);
+
+            var res = new PowThree();
+
+            for (int i = 0; i <= 1000; ++i)
+            {
+                Console.WriteLine("#de ceros: {0}", res.solution(i));
+            }
+
             Console.ReadLine();
         }
 

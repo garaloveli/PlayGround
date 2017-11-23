@@ -44,6 +44,14 @@
     <Compile Include="PassingCars.cs" />
     <Compile Include="MinAvgTwoSlice.cs" />
     <Compile Include="GenomicRangeQuery.cs" />
+    <Compile Include="NumberOfDiscIntersections.cs" />
+    <Compile Include="TreeProduct.cs" />
+    <Compile Include="bs\ArrayLengthOne.cs" />
+    <Compile Include="bs\PowThree.cs" />
+    <Compile Include="bs\VacationTwo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bs\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
