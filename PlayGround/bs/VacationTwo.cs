@@ -4,6 +4,8 @@ using System.Linq;
 
 namespace PlayGround.bs
 {
+    //[1, 2, 3, 4, 4, 3, 3, 5, 4, 3, 2, 1] 
+
     public class VacationTwo
     {
 
@@ -23,36 +25,45 @@ namespace PlayGround.bs
         public int solution(int[] A)
         {
             // write your code in C# 6.0 with .NET 4.5 (Mono)
-            Dictionary<int, int> myVacations = new Dictionary<int, int>();
+            Dictionary<int, int> myvacations = new Dictionary<int, int>();
             for (int i = 0; i < A.Length; i++)
             {
-                if (!myVacations.ContainsKey(A[i]))
+                if (!myvacations.ContainsKey(A[i]))
                 {
-                    myVacations.Add(A[i], i);
-                }
-                else
-                {
-                    int target_trip = A[i];
-                    int original_day = myVacations[target_trip];
-                    long sumOriginal = distance(myVacations, original_day, target_trip);
-                    long sumTarget = distance(myVacations, i, target_trip);
-
-                    if (sumTarget <= sumOriginal)
-                    {
-                        myVacations[target_trip] = i;
-                    }
+                    myvacations.Add(A[i], i);
                 }
             }
 
-            var min = myVacations.Values.Min();
-            var max = myVacations.Values.Max();
+            List<Dictionary<int, int>> sequences = new List<Dictionary<int, int>>();
 
-            foreach (var item in myVacations.OrderBy(c => c.Value))
+            Dictionary<int, int> pos = new Dictionary<int, int>();
+            sequences.Add(pos);
+            for (int i = 0; i < A.Length; i++)
             {
-                Console.WriteLine(string.Format("{0} : {1}", item.Value, item.Key));
+                if (pos.Count == myvacations.Count)
+                {
+                    pos = new Dictionary<int, int>();
+                    sequences.Add(pos);
+                }
+
+                if (!pos.ContainsKey(A[i]))
+                {
+                    pos.Add(A[i], i);
+                }
             }
 
-            return (max - min) + 1;
+            var min = int.MaxValue;
+
+            foreach (var item in sequences.Where(c => c.Count == myvacations.Count))
+            {
+                var minint = item.Values.Min();
+                var maxint = item.Values.Max();
+
+                var nmin = (maxint - minint);
+                if (nmin < min)
+                    min = nmin;
+            }
+            return min;
         }
     }
 }
@@ -136,3 +147,60 @@ namespace PlayGround.bs
 //        }
 //    }
 //}
+
+
+public static int distance(Dictionary<int, int> vacations, int day, int trip)
+{
+    int distance = 0;
+    foreach (var vacation in vacations)
+    {
+        if (vacation.Key != trip)
+        {
+            distance += Math.Abs(vacation.Value - day);
+        }
+    }
+    return distance;
+}
+
+public static int solution(int[] A)
+{
+    Dictionary<int, int> myvacations = new Dictionary<int, int>();
+    for (int i = 0; i < A.Length; i++)
+    {
+        if (!myvacations.ContainsKey(A[i]))
+        {
+            myvacations.Add(A[i], i);
+        }
+    }
+
+    List<Dictionary<int, int>> sequences = new List<Dictionary<int, int>>();
+
+    Dictionary<int, int> pos = new Dictionary<int, int>();
+    sequences.Add(pos);
+    for (int i = 0; i < A.Length; i++)
+    {
+        if (pos.Count == myvacations.Count)
+        {
+            pos = new Dictionary<int, int>();
+            sequences.Add(pos);
+        }
+
+        if (!pos.ContainsKey(A[i]))
+        {
+            pos.Add(A[i], i);
+        }
+    }
+
+    var min = int.MaxValue;
+
+    foreach (var item in sequences)
+    {
+        var minint = item.Values.Min();
+        var maxint = item.Values.Max();
+
+        var nmin = (maxint - minint);
+        if (nmin < min)
+            min = nmin;
+    }
+    return min;
+}
