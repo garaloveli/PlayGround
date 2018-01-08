@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetIdentityTwo", "AspNetIdentityTwo\AspNetIdentityTwo.csproj", "{F02779D9-5B7D-4EFC-A808-0E4F607A39D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAspNetIdentity", "WebAspNetIdentity\WebAspNetIdentity.csproj", "{73724ADE-85A6-4FC5-86D5-093502F3667B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAspNetIdentity.Tests", "WebAspNetIdentity.Tests\WebAspNetIdentity.Tests.csproj", "{59B06FA7-F205-46CD-B981-2FDD2432B8DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F02779D9-5B7D-4EFC-A808-0E4F607A39D7}.Debug|x86.ActiveCfg = Debug|x86
+		{F02779D9-5B7D-4EFC-A808-0E4F607A39D7}.Debug|x86.Build.0 = Debug|x86
+		{F02779D9-5B7D-4EFC-A808-0E4F607A39D7}.Release|x86.ActiveCfg = Release|x86
+		{F02779D9-5B7D-4EFC-A808-0E4F607A39D7}.Release|x86.Build.0 = Release|x86
+		{73724ADE-85A6-4FC5-86D5-093502F3667B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{73724ADE-85A6-4FC5-86D5-093502F3667B}.Debug|x86.Build.0 = Debug|Any CPU
+		{73724ADE-85A6-4FC5-86D5-093502F3667B}.Release|x86.ActiveCfg = Release|Any CPU
+		{73724ADE-85A6-4FC5-86D5-093502F3667B}.Release|x86.Build.0 = Release|Any CPU
+		{59B06FA7-F205-46CD-B981-2FDD2432B8DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{59B06FA7-F205-46CD-B981-2FDD2432B8DE}.Debug|x86.Build.0 = Debug|Any CPU
+		{59B06FA7-F205-46CD-B981-2FDD2432B8DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{59B06FA7-F205-46CD-B981-2FDD2432B8DE}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
